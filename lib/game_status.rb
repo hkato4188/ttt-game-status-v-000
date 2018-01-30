@@ -24,7 +24,6 @@ end
 def full?(board)
   board.all? do |win_combo|
     if win_combo == "X" || win_combo == "O"
-      true
     end
   end
 end
