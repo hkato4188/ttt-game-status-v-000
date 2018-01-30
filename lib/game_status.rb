@@ -23,8 +23,7 @@ end
 
 def full?(board)
   board.all? do |win_combo|
-    if win_combo == "X" || win_combo == "O"
-    end
+    win_combo == "X" || win_combo == "O"
   end
 end
 
