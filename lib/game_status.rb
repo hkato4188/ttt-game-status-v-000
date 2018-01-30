@@ -21,23 +21,33 @@ def won?(board)
   end
 end
 
-  def full?(board)
-  board.all? do |combo|
-    if combo == "X" || combo == "O"
+def full?(board)
+  board.all? do |win_combo|
+    if win_combo == "X" || win_combo == "O"
       true
     end
   end
 end
 
 def draw?(board)
-  (!won?(board) && full?(board))?  true : false
+  if !won?(board) && full?(board)
+    true
+  else false
+  end
 end
 
 def over?(board)
-  (won?(board) || draw?(board) || full?(board))? true : false
+  if won?(board) || draw?(board) || full?(board)
+    true
+  else
+    false
+  end
 end
 
 def winner(board)
   winner_token = won?(board)
-  (winner_token)? board[winner_token[0]] : nil
+  if winner_token board[winner_token[0]] 
+  else
+    nil
+  end
 end
