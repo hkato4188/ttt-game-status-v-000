@@ -36,9 +36,9 @@ def over?(board)
 end
 
 def winner(board)
-  winner_token = won?(board)
-  if winner_token
-    board[winner_token[0]]
+  win_combo = won?(board)
+  if win_combo
+    board[win_combo[0]]
   else
     nil
   end
